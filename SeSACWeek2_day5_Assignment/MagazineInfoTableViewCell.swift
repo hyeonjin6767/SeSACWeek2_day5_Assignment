@@ -9,9 +9,17 @@ import UIKit
 
 class MagazineInfoTableViewCell: UITableViewCell {
 
+    
+    @IBOutlet var magazinePhotoImageView: UIImageView!
+    @IBOutlet var magazineTitleLabel: UILabel!
+    @IBOutlet var magazineSubtitleLabel: UILabel!
+    @IBOutlet var magazineDateLabel: UILabel!
+    
     override func awakeFromNib() {
         super.awakeFromNib()
-        // Initialization code
+        
+        magazinePhotoImageView.layer.cornerRadius = 10
+        //magazineTitleLabel.font.
     }
 
     
