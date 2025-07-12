@@ -9,7 +9,6 @@ import UIKit
 
 class MagazineInfoTableViewCell: UITableViewCell {
 
-    
     @IBOutlet var magazinePhotoImageView: UIImageView!
     @IBOutlet var magazineTitleLabel: UILabel!
     @IBOutlet var magazineSubtitleLabel: UILabel!
@@ -21,6 +20,4 @@ class MagazineInfoTableViewCell: UITableViewCell {
         magazinePhotoImageView.layer.cornerRadius = 10
         //magazineTitleLabel.font.
     }
-
-    
 }

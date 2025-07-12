@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="23727" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="L6P-qF-Spr">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="23727" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="XyT-b5-kQZ">
     <device id="retina6_12" orientation="portrait" appearance="light"/>
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="23721"/>
@@ -23,7 +23,7 @@
             </objects>
             <point key="canvasLocation" x="135.1145038167939" y="3.5211267605633805"/>
         </scene>
-        <!--Magazine Info Table View Controller-->
+        <!--SeSAC TRAVEL-->
         <scene sceneID="TMp-2i-QdM">
             <objects>
                 <tableViewController id="L6P-qF-Spr" customClass="MagazineInfoTableViewController" customModule="SeSACWeek2_day5_Assignment" customModuleProvider="target" sceneMemberID="viewController">
@@ -89,10 +89,29 @@
                             <outlet property="delegate" destination="L6P-qF-Spr" id="UZP-yM-sd6"/>
                         </connections>
                     </tableView>
+                    <navigationItem key="navigationItem" title="SeSAC TRAVEL" id="e43-a4-FIy"/>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Nrp-zK-jRg" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1787" y="4"/>
+            <point key="canvasLocation" x="2712.2137404580153" y="3.5211267605633805"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="xZj-TR-sRL">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="XyT-b5-kQZ" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="XuG-ED-34N">
+                        <rect key="frame" x="0.0" y="118" width="393" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="L6P-qF-Spr" kind="relationship" relationship="rootViewController" id="ZlM-nV-EtO"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="G4l-EV-uOJ" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1785.4961832061067" y="3.5211267605633805"/>
         </scene>
     </scenes>
     <resources>

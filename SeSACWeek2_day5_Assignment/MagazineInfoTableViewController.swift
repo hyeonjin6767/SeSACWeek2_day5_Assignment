@@ -16,7 +16,6 @@ class MagazineInfoTableViewController: UITableViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-     
         print(magazineInfo.magazine.count)
     }
     
@@ -26,11 +25,24 @@ class MagazineInfoTableViewController: UITableViewController {
     }
     
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+        
         let cell = tableView.dequeueReusableCell(withIdentifier: "magazineInfoCell", for: indexPath) as! MagazineInfoTableViewCell
         cell.magazineTitleLabel.text = magazineInfo.magazine[indexPath.row].title
+        
         let url = URL(string: magazineInfo.magazine[indexPath.row].photo_image)!
         cell.magazinePhotoImageView.kf.setImage(with: url)
         cell.magazineSubtitleLabel.text = magazineInfo.magazine[indexPath.row].subtitle
+        
+        //https://formestory.tistory.com/m/6
+        let dateString = magazineInfo.magazine[indexPath.row].date
+        let format = DateFormatter()
+        format.dateFormat = "yyMMdd"
+        let convertDate = format.date(from: dateString)
+        let magazineDateForm = DateFormatter()
+        magazineDateForm.dateFormat = "yy년 MM월 dd일"
+        let convertString = magazineDateForm.string(from: convertDate!)
+        cell.magazineDateLabel.text = convertString
+       
         return cell
     }
     
