@@ -7,8 +7,8 @@
 
 import UIKit
 
-class Game369ViewController: UIViewController {
-
+class Game369ViewController: UIViewController, UITextFieldDelegate {
+    
     @IBOutlet var maxNumberTextF: UITextField!
     @IBOutlet var clapResultLabel: UILabel!
     @IBOutlet var game369ResultLabel: UILabel!
@@ -17,19 +17,18 @@ class Game369ViewController: UIViewController {
         super.viewDidLoad()
         
         maxNumberTextF.placeholder = "최대 숫자를 입력해주세요"
-        
-    }
-
-    @IBAction func maxNumberTextFTapped(_ sender: UITextField) {
-        
-        if maxNumberTextF.text == "\n" {
-            print("엔터 감지")
-        } else {
-            clapResultLabel.text = maxNumberTextF.text
-        }
+        self.maxNumberTextF.delegate = self
     }
     
-    @IBAction func enterButton(_ sender: UIButton) {
+    //엔터키 액션 델리게이트?
+    func textFieldShouldReturn(_ textField: UITextField) -> Bool {
+        maxNumberTextF.resignFirstResponder()
+        performAction()
+        return true
+    }
+    
+    func performAction() {
+        
         let inputString = maxNumberTextF.text
         let stringToInt = Int(inputString!)
         //if let stringToInt = inputString {
@@ -37,12 +36,11 @@ class Game369ViewController: UIViewController {
         for clap in 1...Int(stringToInt!) {
             let clapCheck10 = clap / 10
             let clapCheck1 = clap % 10
-            print("\(clapCheck10),\(clapCheck1)")
-            
+            //print("\(clapCheck10),\(clapCheck1)")
             if clapCheck10 % 3 == 0 && clapCheck1 % 3 == 0 {
                 if clapCheck10 != 0 && clapCheck1 != 0 {
                     clapResultLabel.text?.append("👏👏,")
-                } else if clapCheck1 == 0{
+                } else if clapCheck1 == 0 {
                     clapResultLabel.text?.append("👏\(clapCheck1),")
                 } else if clapCheck10 == 0 {
                     clapResultLabel.text?.append("👏,")
@@ -57,3 +55,4 @@ class Game369ViewController: UIViewController {
         }
     }
 }
+
