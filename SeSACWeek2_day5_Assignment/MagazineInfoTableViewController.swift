@@ -9,7 +9,6 @@ import UIKit
 
 import Kingfisher
 
-
 class MagazineInfoTableViewController: UITableViewController {
 
     let magazineInfo = MagazineInfo()
