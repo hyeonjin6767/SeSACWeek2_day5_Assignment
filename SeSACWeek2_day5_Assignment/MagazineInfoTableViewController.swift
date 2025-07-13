@@ -6,7 +6,6 @@
 //
 
 import UIKit
-
 import Kingfisher
 
 class MagazineInfoTableViewController: UITableViewController {
@@ -17,7 +16,6 @@ class MagazineInfoTableViewController: UITableViewController {
         super.viewDidLoad()
         print(magazineInfo.magazine.count)
     }
-    
     
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return magazineInfo.magazine.count
