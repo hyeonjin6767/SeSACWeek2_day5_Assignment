@@ -12,6 +12,8 @@ class MagazineInfoTableViewController: UITableViewController {
 
     let magazineInfo = MagazineInfo()
     
+    let format = DateFormatter() //위치 변경
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         print(magazineInfo.magazine.count)
@@ -32,7 +34,7 @@ class MagazineInfoTableViewController: UITableViewController {
         
         //https://formestory.tistory.com/m/6
         let dateString = magazineInfo.magazine[indexPath.row].date
-        let format = DateFormatter()
+        //let format = DateFormatter() //위로
         format.dateFormat = "yyMMdd"
         let convertDate = format.date(from: dateString)
         let magazineDateForm = DateFormatter()
