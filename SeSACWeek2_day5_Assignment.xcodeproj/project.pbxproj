@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		C407FD612E22688100A27FA9 /* Kingfisher in Frameworks */ = {isa = PBXBuildFile; productRef = C407FD602E22688100A27FA9 /* Kingfisher */; };
+		C4ED3B4B2E25000800745E19 /* Toast in Frameworks */ = {isa = PBXBuildFile; productRef = C4ED3B4A2E25000800745E19 /* Toast */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -40,6 +41,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				C4ED3B4B2E25000800745E19 /* Toast in Frameworks */,
 				C407FD612E22688100A27FA9 /* Kingfisher in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -84,6 +86,7 @@
 			name = SeSACWeek2_day5_Assignment;
 			packageProductDependencies = (
 				C407FD602E22688100A27FA9 /* Kingfisher */,
+				C4ED3B4A2E25000800745E19 /* Toast */,
 			);
 			productName = SeSACWeek2_day5_Assignment;
 			productReference = C408FF492E2207CD00A15A53 /* SeSACWeek2_day5_Assignment.app */;
@@ -115,6 +118,7 @@
 			minimizedProjectReferenceProxies = 1;
 			packageReferences = (
 				C407FD5F2E22688100A27FA9 /* XCRemoteSwiftPackageReference "Kingfisher" */,
+				C4ED3B492E25000800745E19 /* XCRemoteSwiftPackageReference "Toast-Swift" */,
 			);
 			preferredProjectObjectVersion = 77;
 			productRefGroup = C408FF4A2E2207CD00A15A53 /* Products */;
@@ -362,6 +366,14 @@
 				minimumVersion = 8.4.0;
 			};
 		};
+		C4ED3B492E25000800745E19 /* XCRemoteSwiftPackageReference "Toast-Swift" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/scalessec/Toast-Swift.git";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 5.1.1;
+			};
+		};
 /* End XCRemoteSwiftPackageReference section */
 
 /* Begin XCSwiftPackageProductDependency section */
@@ -369,6 +381,11 @@
 			isa = XCSwiftPackageProductDependency;
 			package = C407FD5F2E22688100A27FA9 /* XCRemoteSwiftPackageReference "Kingfisher" */;
 			productName = Kingfisher;
+		};
+		C4ED3B4A2E25000800745E19 /* Toast */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = C4ED3B492E25000800745E19 /* XCRemoteSwiftPackageReference "Toast-Swift" */;
+			productName = Toast;
 		};
 /* End XCSwiftPackageProductDependency section */
 	};
