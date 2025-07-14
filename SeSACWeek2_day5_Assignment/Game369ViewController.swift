@@ -7,7 +7,7 @@
 
 import UIKit
 
-class Game369ViewController: UIViewController, UITextFieldDelegate {
+class Game369ViewController: UIViewController {
     
     @IBOutlet var maxNumberTextF: UITextField!
     @IBOutlet var clapResultLabel: UILabel!
@@ -17,21 +17,18 @@ class Game369ViewController: UIViewController, UITextFieldDelegate {
         super.viewDidLoad()
         
         maxNumberTextF.placeholder = "최대 숫자를 입력해주세요"
-        self.maxNumberTextF.delegate = self
+        //self.maxNumberTextF.delegate = self
     }
     
-    //엔터키 액션 델리게이트?
-    func textFieldShouldReturn(_ textField: UITextField) -> Bool {
-        maxNumberTextF.resignFirstResponder()
-        performAction()
-        return true
-    }
-    
-    func performAction() {
+    @IBAction func enterActionTextF(_ sender: UITextField) {
+        //view.endEditing(true)
         
         let inputString = maxNumberTextF.text
         let stringToInt = Int(inputString!)
-        //if let stringToInt = inputString {
+        
+//        if let inputString = maxNumberTextF.text, let stringToInt = Int(inputString) {
+//            maxNumberTextF.text = stringToInt
+//        }
         
         for clap in 1...Int(stringToInt!) {
             let clapCheck10 = clap / 10
@@ -54,5 +51,19 @@ class Game369ViewController: UIViewController, UITextFieldDelegate {
             }
         }
     }
+        
 }
+    
+//    func performAction() {
+//        
+//    }
+    
+    //extension Game369ViewController: UITextFieldDelegate {
+    //    //엔터키 액션 델리게이트?
+    //    func textFieldShouldReturn(_ textField: UITextField) -> Bool {
+    //        maxNumberTextF.resignFirstResponder()
+    //        performAction()
+    //        return true
+    //    }
+    //}
 
