@@ -7,6 +7,16 @@
 
 import Foundation
 
+struct Travel {
+    let title: String
+    let description: String
+    let travel_image: String
+    let grade: Double
+    let save: Int
+    let like: Bool
+    let ad: Bool
+}
+
 struct TravelInfo {
     let travel: [Travel] = [
         Travel(title: "하나우마 베이",
@@ -37,12 +47,12 @@ struct TravelInfo {
                save: 7892,
                like: true,
                ad: false),
-        Travel(title: "하와이 여행을 가고싶다면?\n수업이 있는데 가실 생각은 아니시죠?",
-               description: nil,
-               travel_image: nil,
-               grade: nil,
-               save: nil,
-               like: nil,
+        Travel(title: "하와이 여행",
+               description: "최고의 신혼 여행지",
+               travel_image: "https://www.hawaiiliving.com/kr/blog/wp-content/uploads/2024/10/HERO-Ala-Moana-low-res.jpg",
+               grade: 4.8,
+               save: 8370,
+               like: true,
                ad: true),
         Travel(title: "철도 박물관",
                description: "일본 철도의 역사를 둘러볼 수 있는 박물관",
@@ -65,12 +75,12 @@ struct TravelInfo {
                save: 37077,
                like: false,
                ad: false),
-        Travel(title: "도쿄 여행 예약은?\nXcode로 직접 예약앱을 만들면 되겠네요!",
-               description: nil,
-               travel_image: nil,
-               grade: nil,
-               save: nil,
-               like: nil,
+        Travel(title: "도쿄 여행",
+               description: "도쿄의 밤거리 문화",
+               travel_image: "https://www.datocms-assets.com/101439/1700905319-tokyo-at-night.webp?auto=format&dpr=2&fit=crop&h=800&w=1200",
+               grade: 3.5,
+               save: 3947,
+               like: false,
                ad: true),
         Travel(title: "동문 재래 시장",
                description: "먹거리와 생활용품을 판매하는, 제주에서 가장 큰 시장",
@@ -100,12 +110,12 @@ struct TravelInfo {
                save: 44507,
                like: true,
                ad: false),
-        Travel(title: "제주 비행기 최저가! 예약 문의는 취업부터!",
-               description: nil,
-               travel_image: nil,
-               grade: nil,
-               save: nil,
-               like: nil,
+        Travel(title: "제주 비행기 최저가!",
+               description: "국내 여행 1순위",
+               travel_image: "https://topictree.co.kr/wp-content/uploads/2025/03/Jeju-Island-visitors-record-low-4.jpg",
+               grade: 4.1,
+               save: 4938,
+               like: false,
                ad: true),
         Travel(title: "영등포 캠퍼스",
                description: "Jack님과 함께하는,\n우당탕탕 iOS 개발 성장기!",
