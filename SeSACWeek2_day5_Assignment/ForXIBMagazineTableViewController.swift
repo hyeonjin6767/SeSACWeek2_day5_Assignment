@@ -17,6 +17,8 @@ class ForXIBMagazineTableViewController: UITableViewController {
         //XIB로 변경 //셀 등록
         let xib = UINib(nibName: "MagazineTableViewCell", bundle: nil)
         tableView.register(xib, forCellReuseIdentifier: "MagazineTableViewCell")
+        
+        //tableView.rowHeight = UITableView.automaticDimension
 
     }
     
@@ -34,7 +36,7 @@ class ForXIBMagazineTableViewController: UITableViewController {
     }
     
     override func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
-        return 500
-        //return UITableView.automaticDimension
+        //return 500
+        return UITableView.automaticDimension
     }
 }
