@@ -34,7 +34,7 @@ class ForXIBMagazineTableViewController: UITableViewController {
         cell.configureSetting(row: rowInfo)
         //이미지뷰 레이아웃 테스트용 백그라운드컬러 설정 - 잭님's 팁
         //cell.magazinePhotoImageView.backgroundColor = .red
-        //cell.magazinePhotoImageView.contentMode = .scaleAspectFill
+        cell.magazinePhotoImageView.contentMode = .scaleAspectFill
         
         return cell
     }
