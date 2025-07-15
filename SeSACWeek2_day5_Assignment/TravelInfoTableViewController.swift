@@ -14,10 +14,9 @@ class TravelInfoTableViewController: UITableViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
+        
         let xib = UINib(nibName: "TravelInfoTableViewCell", bundle: nil)
         tableView.register(xib, forCellReuseIdentifier: "TravelInfoTableViewCell")
-
-       
     }
     
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
@@ -30,15 +29,18 @@ class TravelInfoTableViewController: UITableViewController {
         let rowInfo = travelInfo.travel[indexPath.row]
         cell.configureSetting(row: rowInfo)
         
-       return cell
+        return cell
         
     }
     
     override func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
-        return 100
-        
+        return 150
     }
-
     
-
+    override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        
+        let storyboard = UIStoryboard(name: "Main", bundle: nil)
+        let viewcontroller = storyboard.instantiateViewController(withIdentifier: "TravelShowViewController") as! TravelShowViewController
+        navigationController?.pushViewController(viewcontroller, animated: true)
+    }
 }
