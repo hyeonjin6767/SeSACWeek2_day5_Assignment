@@ -17,7 +17,9 @@ class TravelInfoTableViewCell: UITableViewCell {
     override func awakeFromNib() {
         super.awakeFromNib()
         travelTitleLabel.font = .boldSystemFont(ofSize: 20)
-        travelPictureImageView.layer.cornerRadius = 10
+        travelPictureImageView.layer.cornerRadius = 15
+        travelPictureImageView.contentMode = .scaleAspectFill
+        
     }
 
     func configureSetting(row: Travel) {

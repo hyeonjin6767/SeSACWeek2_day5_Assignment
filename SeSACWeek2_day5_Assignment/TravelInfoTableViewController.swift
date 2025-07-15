@@ -10,13 +10,14 @@ import Kingfisher
 
 class TravelInfoTableViewController: UITableViewController {
     
-    let travelInfo = TravelInfo()
+    var travelInfo = TravelInfo()
 
     override func viewDidLoad() {
         super.viewDidLoad()
         
         let xib = UINib(nibName: "TravelInfoTableViewCell", bundle: nil)
         tableView.register(xib, forCellReuseIdentifier: "TravelInfoTableViewCell")
+        
     }
     
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
@@ -27,6 +28,11 @@ class TravelInfoTableViewController: UITableViewController {
         
         let cell = tableView.dequeueReusableCell(withIdentifier: "TravelInfoTableViewCell", for: indexPath) as! TravelInfoTableViewCell
         let rowInfo = travelInfo.travel[indexPath.row]
+        if rowInfo.ad == true {
+            travelInfo.travel.remove(at: indexPath.row)
+            //여기에 광고버튼 추가?
+            tableView.reloadData()
+        }
         cell.configureSetting(row: rowInfo)
         
         return cell
@@ -42,5 +48,14 @@ class TravelInfoTableViewController: UITableViewController {
         let storyboard = UIStoryboard(name: "Main", bundle: nil)
         let viewcontroller = storyboard.instantiateViewController(withIdentifier: "TravelShowViewController") as! TravelShowViewController
         navigationController?.pushViewController(viewcontroller, animated: true)
+    }
+    
+    @IBAction func adBarButtonItemClicked(_ sender: UIBarButtonItem) {
+        
+        let storyboard = UIStoryboard(name: "Main", bundle: nil)
+        let viewcontroller = storyboard.instantiateViewController(withIdentifier: "AdPresentViewController") as! AdPresentViewController
+        viewcontroller.modalPresentationStyle = .fullScreen
+        present(viewcontroller, animated: true)
+        
     }
 }

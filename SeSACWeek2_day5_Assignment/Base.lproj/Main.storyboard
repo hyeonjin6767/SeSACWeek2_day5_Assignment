@@ -54,6 +54,35 @@
             </objects>
             <point key="canvasLocation" x="1920" y="741"/>
         </scene>
+        <!--인기 도시-->
+        <scene sceneID="w1q-b6-Oq9">
+            <objects>
+                <tableViewController id="HZF-FB-Fi6" customClass="ForXIBCityTableViewController" customModule="SeSACWeek2_day5_Assignment" customModuleProvider="target" sceneMemberID="viewController">
+                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="-1" estimatedSectionHeaderHeight="-1" sectionFooterHeight="-1" estimatedSectionFooterHeight="-1" id="wrr-FG-us6">
+                        <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <prototypes>
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" id="rqg-NY-g4c">
+                                <rect key="frame" x="0.0" y="50" width="393" height="44.666667938232422"/>
+                                <autoresizingMask key="autoresizingMask"/>
+                                <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="rqg-NY-g4c" id="rtL-Oe-Z5x">
+                                    <rect key="frame" x="0.0" y="0.0" width="393" height="44.666667938232422"/>
+                                    <autoresizingMask key="autoresizingMask"/>
+                                </tableViewCellContentView>
+                            </tableViewCell>
+                        </prototypes>
+                        <connections>
+                            <outlet property="dataSource" destination="HZF-FB-Fi6" id="q5D-cl-haj"/>
+                            <outlet property="delegate" destination="HZF-FB-Fi6" id="6qo-CA-1zi"/>
+                        </connections>
+                    </tableView>
+                    <navigationItem key="navigationItem" title="인기 도시" id="vhC-9w-pln"/>
+                </tableViewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="aeJ-gG-h75" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2846.5648854961833" y="1484.5070422535211"/>
+        </scene>
         <!--도시 상세 정보-->
         <scene sceneID="xOZ-ti-a2t">
             <objects>
@@ -77,13 +106,19 @@
                             <outlet property="delegate" destination="ENU-yq-zEz" id="rWm-hu-wzL"/>
                         </connections>
                     </tableView>
-                    <navigationItem key="navigationItem" title="도시 상세 정보" id="WjA-cZ-gdo"/>
+                    <navigationItem key="navigationItem" title="도시 상세 정보" id="FAF-Lk-XZM">
+                        <barButtonItem key="rightBarButtonItem" title="임시 광고 버튼" id="xwC-Dc-b3H">
+                            <connections>
+                                <action selector="adBarButtonItemClicked:" destination="ENU-yq-zEz" id="KQv-2r-nZP"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="RTL-rz-yu5" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="2712" y="-712"/>
         </scene>
-        <!--Title-->
+        <!--관광지 화면-->
         <scene sceneID="e17-yf-fep">
             <objects>
                 <viewController storyboardIdentifier="TravelShowViewController" id="8w8-Co-T0r" customClass="TravelShowViewController" customModule="SeSACWeek2_day5_Assignment" customModuleProvider="target" sceneMemberID="viewController">
@@ -122,7 +157,7 @@
                         <viewLayoutGuide key="safeArea" id="XpB-xj-7jc"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                     </view>
-                    <navigationItem key="navigationItem" title="Title" id="Drf-ET-5B6"/>
+                    <navigationItem key="navigationItem" title="관광지 화면" id="Drf-ET-5B6"/>
                     <connections>
                         <outlet property="popButton" destination="Eu0-Iz-aQr" id="0fC-Lb-0hc"/>
                         <outlet property="travelDescriptionLabel" destination="Uov-XF-3jx" id="GV1-rr-xyw"/>
@@ -132,7 +167,48 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="HJB-Wg-IFD" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="3649.6183206106871" y="-713.38028169014092"/>
+            <point key="canvasLocation" x="4468" y="-713"/>
+        </scene>
+        <!--Title-->
+        <scene sceneID="3M8-cs-PHs">
+            <objects>
+                <viewController storyboardIdentifier="AdPresentViewController" id="gER-vx-ZIg" customClass="AdPresentViewController" customModule="SeSACWeek2_day5_Assignment" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="GF9-hq-tro">
+                        <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="rAG-85-bvU">
+                                <rect key="frame" x="96" y="332" width="200" height="188"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <navigationBar contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Uc9-99-Ung">
+                                <rect key="frame" x="0.0" y="74" width="393" height="44"/>
+                                <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMaxY="YES"/>
+                                <items>
+                                    <navigationItem title="광고 화면" id="4xF-hc-Sff">
+                                        <barButtonItem key="leftBarButtonItem" image="chevron.backward" catalog="system" id="o0S-1o-Tup">
+                                            <connections>
+                                                <action selector="dissmissBarButtonClicked:" destination="gER-vx-ZIg" id="7hv-a3-CJ6"/>
+                                            </connections>
+                                        </barButtonItem>
+                                    </navigationItem>
+                                </items>
+                            </navigationBar>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="5EV-VT-OjG"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                    </view>
+                    <navigationItem key="navigationItem" title="Title" id="31s-JC-uAu"/>
+                    <connections>
+                        <outlet property="adLabel" destination="rAG-85-bvU" id="cmF-xb-5Mk"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="9j8-Sw-xlK" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="5413" y="-713"/>
         </scene>
         <!--SeSAC TRAVEL-->
         <scene sceneID="TMp-2i-QdM">
@@ -205,7 +281,7 @@
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Nrp-zK-jRg" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="5524" y="4"/>
+            <point key="canvasLocation" x="6879" y="4"/>
         </scene>
         <!--SeSAC TRAVEL-->
         <scene sceneID="93J-IH-zYN">
@@ -253,7 +329,7 @@
                 </navigationController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="G4l-EV-uOJ" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="4688" y="4"/>
+            <point key="canvasLocation" x="6086" y="4"/>
         </scene>
         <!--Tab Bar Controller-->
         <scene sceneID="VcD-ao-sjr">
@@ -269,6 +345,7 @@
                         <segue destination="Q8p-co-tsJ" kind="relationship" relationship="viewControllers" id="yjP-Nb-9sG"/>
                         <segue destination="BYZ-38-t0r" kind="relationship" relationship="viewControllers" id="lG0-Mt-vle"/>
                         <segue destination="TKW-Sw-bfZ" kind="relationship" relationship="viewControllers" id="p04-XC-KdK"/>
+                        <segue destination="NSa-dk-yS8" kind="relationship" relationship="viewControllers" id="H4T-hq-kjT"/>
                     </connections>
                 </tabBarController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="PTh-BC-mkt" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
@@ -313,11 +390,50 @@
             </objects>
             <point key="canvasLocation" x="1920" y="4"/>
         </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="loQ-sL-Wip">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="toA-0x-DPk" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="a96-bp-1Yg">
+                        <rect key="frame" x="0.0" y="118" width="393" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="8w8-Co-T0r" kind="relationship" relationship="rootViewController" id="oNg-WB-yCO"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="iq6-nF-kqR" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="3694" y="-713"/>
+        </scene>
+        <!--City-->
+        <scene sceneID="iUR-fv-Ye6">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="NSa-dk-yS8" sceneMemberID="viewController">
+                    <tabBarItem key="tabBarItem" title="City" image="hat.cap.fill" catalog="system" id="OSg-6h-spr"/>
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="iPa-nr-nuK">
+                        <rect key="frame" x="0.0" y="118" width="393" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="HZF-FB-Fi6" kind="relationship" relationship="rootViewController" id="67N-Um-elv"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="hvF-HV-qrS" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1919.8473282442746" y="1484.5070422535211"/>
+        </scene>
     </scenes>
     <resources>
         <image name="airplane.departure" catalog="system" width="128" height="84"/>
         <image name="book.fill" catalog="system" width="128" height="95"/>
+        <image name="chevron.backward" catalog="system" width="97" height="128"/>
         <image name="gamecontroller.fill" catalog="system" width="128" height="79"/>
+        <image name="hat.cap.fill" catalog="system" width="128" height="70"/>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
         </systemColor>
