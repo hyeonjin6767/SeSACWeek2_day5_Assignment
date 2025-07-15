@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="23727" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="Q8p-co-tsJ">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="23727" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="IMi-Qh-SCI">
     <device id="retina6_12" orientation="portrait" appearance="light"/>
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="23721"/>
@@ -52,7 +52,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2712" y="763"/>
+            <point key="canvasLocation" x="1920" y="741"/>
         </scene>
         <!--도시 상세 정보-->
         <scene sceneID="xOZ-ti-a2t">
@@ -82,6 +82,57 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="RTL-rz-yu5" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="2712" y="-712"/>
+        </scene>
+        <!--Title-->
+        <scene sceneID="e17-yf-fep">
+            <objects>
+                <viewController storyboardIdentifier="TravelShowViewController" id="8w8-Co-T0r" customClass="TravelShowViewController" customModule="SeSACWeek2_day5_Assignment" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="jm8-vN-6q8">
+                        <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="4kI-OE-eE5">
+                                <rect key="frame" x="64" y="118" width="265" height="265"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            </imageView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="3ST-1U-uNn">
+                                <rect key="frame" x="104" y="392" width="185" height="68"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Uov-XF-3jx">
+                                <rect key="frame" x="64" y="468" width="265" height="97"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Eu0-Iz-aQr">
+                                <rect key="frame" x="159" y="592" width="75" height="35"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="plain" title="Button"/>
+                                <connections>
+                                    <action selector="popButtonClicked:" destination="8w8-Co-T0r" eventType="touchUpInside" id="o3U-Ny-c3W"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="XpB-xj-7jc"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                    </view>
+                    <navigationItem key="navigationItem" title="Title" id="Drf-ET-5B6"/>
+                    <connections>
+                        <outlet property="popButton" destination="Eu0-Iz-aQr" id="0fC-Lb-0hc"/>
+                        <outlet property="travelDescriptionLabel" destination="Uov-XF-3jx" id="GV1-rr-xyw"/>
+                        <outlet property="travelImageView" destination="4kI-OE-eE5" id="CQp-rI-hHz"/>
+                        <outlet property="travelTitleLabel" destination="3ST-1U-uNn" id="A5h-WN-Kzk"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="HJB-Wg-IFD" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="3649.6183206106871" y="-713.38028169014092"/>
         </scene>
         <!--SeSAC TRAVEL-->
         <scene sceneID="TMp-2i-QdM">
@@ -154,7 +205,7 @@
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Nrp-zK-jRg" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2712.2137404580153" y="3.5211267605633805"/>
+            <point key="canvasLocation" x="5524" y="4"/>
         </scene>
         <!--SeSAC TRAVEL-->
         <scene sceneID="93J-IH-zYN">
@@ -183,7 +234,7 @@
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="BPK-uN-imO" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="4431" y="4"/>
+            <point key="canvasLocation" x="2711" y="4"/>
         </scene>
         <!--Magazine-->
         <scene sceneID="xZj-TR-sRL">
@@ -202,7 +253,7 @@
                 </navigationController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="G4l-EV-uOJ" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1920" y="4"/>
+            <point key="canvasLocation" x="4688" y="4"/>
         </scene>
         <!--Tab Bar Controller-->
         <scene sceneID="VcD-ao-sjr">
@@ -215,9 +266,9 @@
                         <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                     </tabBar>
                     <connections>
-                        <segue destination="XyT-b5-kQZ" kind="relationship" relationship="viewControllers" id="6LG-Yd-wrF"/>
-                        <segue destination="BYZ-38-t0r" kind="relationship" relationship="viewControllers" id="1Dp-Bu-iuy"/>
-                        <segue destination="TKW-Sw-bfZ" kind="relationship" relationship="viewControllers" id="Dyi-j4-hQW"/>
+                        <segue destination="Q8p-co-tsJ" kind="relationship" relationship="viewControllers" id="yjP-Nb-9sG"/>
+                        <segue destination="BYZ-38-t0r" kind="relationship" relationship="viewControllers" id="lG0-Mt-vle"/>
+                        <segue destination="TKW-Sw-bfZ" kind="relationship" relationship="viewControllers" id="p04-XC-KdK"/>
                     </connections>
                 </tabBarController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="PTh-BC-mkt" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
@@ -243,10 +294,11 @@
             </objects>
             <point key="canvasLocation" x="1920" y="-712"/>
         </scene>
-        <!--Navigation Controller-->
+        <!--Magazine-->
         <scene sceneID="LON-RX-OlQ">
             <objects>
                 <navigationController automaticallyAdjustsScrollViewInsets="NO" id="Q8p-co-tsJ" sceneMemberID="viewController">
+                    <tabBarItem key="tabBarItem" title="Magazine" image="book.fill" catalog="system" id="LrF-Ql-uIl"/>
                     <toolbarItems/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="zZt-jA-p9n">
                         <rect key="frame" x="0.0" y="118" width="393" height="44"/>
@@ -259,7 +311,7 @@
                 </navigationController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="QAV-6o-I3V" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="3637" y="4"/>
+            <point key="canvasLocation" x="1920" y="4"/>
         </scene>
     </scenes>
     <resources>

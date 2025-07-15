@@ -32,12 +32,15 @@ class ForXIBMagazineTableViewController: UITableViewController {
         let cell = tableView.dequeueReusableCell(withIdentifier: "MagazineTableViewCell", for: indexPath) as! MagazineTableViewCell
         let rowInfo = magazineInfo.magazine[indexPath.row]
         cell.configureSetting(row: rowInfo)
+        //이미지뷰 레이아웃 테스트용 백그라운드컬러 설정 - 잭님's 팁
+        //cell.magazinePhotoImageView.backgroundColor = .red
+        //cell.magazinePhotoImageView.contentMode = .scaleAspectFill
         
         return cell
     }
     
     override func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
-        //return 500
+//        return 500
         return UITableView.automaticDimension
     }
 }
