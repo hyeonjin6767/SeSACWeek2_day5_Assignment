@@ -11,14 +11,17 @@ class AdPresentViewController: UIViewController {
 
     @IBOutlet var adLabel: UILabel!
     
+    var getAdInfo: Travel = Travel(title: "", description: "", travel_image: "", grade: 0.0, save: 0, like: false, ad: false)
+    
     override func viewDidLoad() {
         super.viewDidLoad()
 
         adLabel.numberOfLines = 3
-        adLabel.text = "도쿄 여행 예약은?\n수업이 있는데 가실 생각은 아니시죠?"
         adLabel.textAlignment = .center
         adLabel.font = .boldSystemFont(ofSize: 25)
         //view.backgroundColor = .brown
+        
+        adLabel.text = getAdInfo.title
     }
     
     @IBAction func dissmissBarButtonClicked(_ sender: UIBarButtonItem) {

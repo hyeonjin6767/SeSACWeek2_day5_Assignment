@@ -15,23 +15,29 @@ class TravelShowViewController: UIViewController {
     @IBOutlet var travelDescriptionLabel: UILabel!
     @IBOutlet var popButton: UIButton!
     
+    //1단계:전달받을 값을 받을 빈 그릇만들기
+    var getTravelInfo: Travel = Travel(title: "", description: "", travel_image: "", grade: 0.0, save: 0, like: false, ad: false)
+    
     override func viewDidLoad() {
         super.viewDidLoad()
-        //임의의 데이터 넣어주기
-        let url = URL(string: travelInfo.travel[5].travel_image)!
-            travelImageView.kf.setImage(with: url)
+        
         travelImageView.layer.cornerRadius = 10
         travelImageView.contentMode = .scaleAspectFill
         travelTitleLabel.textAlignment = .center
         travelTitleLabel.font = .boldSystemFont(ofSize: 30)
-        travelTitleLabel.text = travelInfo.travel[5].title
-        travelDescriptionLabel.text = travelInfo.travel[5].description
         travelDescriptionLabel.textAlignment = .center
         travelDescriptionLabel.font = .boldSystemFont(ofSize: 15)
-        popButton.setTitle("다른 광광지 보러가기", for: .normal)
+        popButton.setTitle("다른 관광지 보러가기", for: .normal)
         popButton.setTitleColor(.white, for: .normal)
         popButton.backgroundColor = .systemBlue
         popButton.layer.cornerRadius = 10
+        
+        //3단계:그릇에 받은 데이터 활용
+        let url = URL(string: getTravelInfo.travel_image)!
+        travelImageView.kf.setImage(with: url)
+        travelTitleLabel.text = getTravelInfo.title
+        travelDescriptionLabel.text = getTravelInfo.description
+        
     }
     
     @IBAction func popButtonClicked(_ sender: UIButton) {

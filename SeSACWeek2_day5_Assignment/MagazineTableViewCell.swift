@@ -14,6 +14,7 @@ class MagazineTableViewCell: UITableViewCell {
     @IBOutlet var magazineSubtitleLabel: UILabel!
     @IBOutlet var magazineDateLabel: UILabel!
     
+    // static + extension
     let format = DateFormatter() //위치 변경
     
     override func awakeFromNib() { //고정값이 있는 디자인

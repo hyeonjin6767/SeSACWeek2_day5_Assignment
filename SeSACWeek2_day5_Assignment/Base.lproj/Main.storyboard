@@ -77,6 +77,7 @@
                             <outlet property="delegate" destination="HZF-FB-Fi6" id="6qo-CA-1zi"/>
                         </connections>
                     </tableView>
+                    <tabBarItem key="tabBarItem" title="Item" id="Y5X-qt-lWs"/>
                     <navigationItem key="navigationItem" title="인기 도시" id="vhC-9w-pln"/>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="aeJ-gG-h75" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
@@ -107,6 +108,7 @@
                         </connections>
                     </tableView>
                     <navigationItem key="navigationItem" title="도시 상세 정보" id="FAF-Lk-XZM">
+                        <barButtonItem key="backBarButtonItem" title=" " id="Ma7-tF-1yX"/>
                         <barButtonItem key="rightBarButtonItem" title="임시 광고 버튼" id="xwC-Dc-b3H">
                             <connections>
                                 <action selector="adBarButtonItemClicked:" destination="ENU-yq-zEz" id="KQv-2r-nZP"/>
@@ -208,7 +210,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="9j8-Sw-xlK" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="5413" y="-713"/>
+            <point key="canvasLocation" x="5523" y="-713"/>
         </scene>
         <!--SeSAC TRAVEL-->
         <scene sceneID="TMp-2i-QdM">
@@ -345,12 +347,12 @@
                         <segue destination="Q8p-co-tsJ" kind="relationship" relationship="viewControllers" id="yjP-Nb-9sG"/>
                         <segue destination="BYZ-38-t0r" kind="relationship" relationship="viewControllers" id="lG0-Mt-vle"/>
                         <segue destination="TKW-Sw-bfZ" kind="relationship" relationship="viewControllers" id="p04-XC-KdK"/>
-                        <segue destination="NSa-dk-yS8" kind="relationship" relationship="viewControllers" id="H4T-hq-kjT"/>
+                        <segue destination="NSa-dk-yS8" kind="relationship" relationship="viewControllers" id="ibJ-HR-q6T"/>
                     </connections>
                 </tabBarController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="PTh-BC-mkt" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="877" y="388"/>
+            <point key="canvasLocation" x="837" y="370"/>
         </scene>
         <!--Travel-->
         <scene sceneID="sxO-5L-hce">
@@ -395,7 +397,7 @@
             <objects>
                 <navigationController automaticallyAdjustsScrollViewInsets="NO" id="toA-0x-DPk" sceneMemberID="viewController">
                     <toolbarItems/>
-                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="a96-bp-1Yg">
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" backIndicatorImage="chevron.backward" catalog="system" id="a96-bp-1Yg">
                         <rect key="frame" x="0.0" y="118" width="393" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
                     </navigationBar>
