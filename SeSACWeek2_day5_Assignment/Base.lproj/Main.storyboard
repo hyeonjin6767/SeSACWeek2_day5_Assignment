@@ -82,7 +82,65 @@
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="aeJ-gG-h75" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2846.5648854961833" y="1484.5070422535211"/>
+            <point key="canvasLocation" x="6914" y="1485"/>
+        </scene>
+        <!--인기 도시-->
+        <scene sceneID="v8c-8D-Wc6">
+            <objects>
+                <viewController id="zSR-zZ-moS" customClass="ForXIBCity2ViewController" customModule="SeSACWeek2_day5_Assignment" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="3ZF-dO-jCx">
+                        <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="-1" estimatedSectionHeaderHeight="-1" sectionFooterHeight="-1" estimatedSectionFooterHeight="-1" translatesAutoresizingMaskIntoConstraints="NO" id="Xwc-KW-5Xz">
+                                <rect key="frame" x="16" y="162" width="361" height="622"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                            </tableView>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="MNt-dX-N6q"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                    </view>
+                    <navigationItem key="navigationItem" title="인기 도시" id="RWo-1L-qqf"/>
+                    <connections>
+                        <outlet property="myTableView" destination="Xwc-KW-5Xz" id="QKn-dw-x8s"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="OvA-fi-pKf" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2711" y="1485"/>
+        </scene>
+        <!--Popular City View Controller-->
+        <scene sceneID="qOr-q4-Oid">
+            <objects>
+                <viewController storyboardIdentifier="PopularCityViewController" id="scS-Oo-An7" customClass="PopularCityViewController" customModule="SeSACWeek2_day5_Assignment" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="6Du-rX-Wiu">
+                        <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="AVH-R8-3Wd">
+                                <rect key="frame" x="16" y="159" width="361" height="191"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            </imageView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="A2x-e6-GIe">
+                                <rect key="frame" x="105" y="358" width="182" height="52"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="lpz-RY-8tJ"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                    </view>
+                    <connections>
+                        <outlet property="popualrCityNameLabel" destination="A2x-e6-GIe" id="G6M-zN-aQU"/>
+                        <outlet property="popularCityImageView" destination="AVH-R8-3Wd" id="4wW-4g-AOA"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="rDY-cR-V5p" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="3542.7480916030531" y="1484.5070422535211"/>
         </scene>
         <!--도시 상세 정보-->
         <scene sceneID="xOZ-ti-a2t">
@@ -169,7 +227,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="HJB-Wg-IFD" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="4468" y="-713"/>
+            <point key="canvasLocation" x="4361" y="-713"/>
         </scene>
         <!--Title-->
         <scene sceneID="3M8-cs-PHs">
@@ -210,7 +268,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="9j8-Sw-xlK" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="5523" y="-713"/>
+            <point key="canvasLocation" x="5178" y="-713"/>
         </scene>
         <!--SeSAC TRAVEL-->
         <scene sceneID="TMp-2i-QdM">
@@ -283,7 +341,7 @@
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Nrp-zK-jRg" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="6879" y="4"/>
+            <point key="canvasLocation" x="6914" y="4"/>
         </scene>
         <!--SeSAC TRAVEL-->
         <scene sceneID="93J-IH-zYN">
@@ -331,7 +389,7 @@
                 </navigationController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="G4l-EV-uOJ" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="6086" y="4"/>
+            <point key="canvasLocation" x="6152" y="4"/>
         </scene>
         <!--Tab Bar Controller-->
         <scene sceneID="VcD-ao-sjr">
@@ -347,7 +405,7 @@
                         <segue destination="Q8p-co-tsJ" kind="relationship" relationship="viewControllers" id="yjP-Nb-9sG"/>
                         <segue destination="BYZ-38-t0r" kind="relationship" relationship="viewControllers" id="lG0-Mt-vle"/>
                         <segue destination="TKW-Sw-bfZ" kind="relationship" relationship="viewControllers" id="p04-XC-KdK"/>
-                        <segue destination="NSa-dk-yS8" kind="relationship" relationship="viewControllers" id="ibJ-HR-q6T"/>
+                        <segue destination="gSl-EI-gdU" kind="relationship" relationship="viewControllers" id="E88-29-njD"/>
                     </connections>
                 </tabBarController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="PTh-BC-mkt" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
@@ -408,7 +466,7 @@
                 </navigationController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="iq6-nF-kqR" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="3694" y="-713"/>
+            <point key="canvasLocation" x="3543" y="-713"/>
         </scene>
         <!--City-->
         <scene sceneID="iUR-fv-Ye6">
@@ -427,7 +485,26 @@
                 </navigationController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="hvF-HV-qrS" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1919.8473282442746" y="1484.5070422535211"/>
+            <point key="canvasLocation" x="6152" y="1485"/>
+        </scene>
+        <!--City-->
+        <scene sceneID="V5E-bW-CW1">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="gSl-EI-gdU" sceneMemberID="viewController">
+                    <tabBarItem key="tabBarItem" title="City" image="hat.cap.fill" catalog="system" id="zM4-4b-CTk"/>
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="hUt-EL-Xgk">
+                        <rect key="frame" x="0.0" y="118" width="393" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="zSR-zZ-moS" kind="relationship" relationship="rootViewController" id="qwK-9T-Z11"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="txX-f5-pBL" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1920" y="1485"/>
         </scene>
     </scenes>
     <resources>

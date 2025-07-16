@@ -17,12 +17,13 @@ class CityTableViewCell: UITableViewCell {
         super.awakeFromNib()
         
         cityPhotoImageView.layer.cornerRadius = 10
-        cityNameLabel.font = .boldSystemFont(ofSize: 25)
+        cityNameLabel.font = .boldSystemFont(ofSize: 20)
         cityNameLabel.textColor = .white
         cityNameLabel.textAlignment = .right
         cityPhotoImageView.contentMode = .scaleAspectFill
         cityExplainLabel.textColor = .white
         cityExplainLabel.backgroundColor = UIColor(white: 0, alpha: 0.5)
+        cityExplainLabel.layer.cornerRadius = 20
     }
     
     func configureSet(row: City) {

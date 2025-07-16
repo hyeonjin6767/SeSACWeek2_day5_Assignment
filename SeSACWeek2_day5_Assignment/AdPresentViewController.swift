@@ -12,6 +12,7 @@ class AdPresentViewController: UIViewController {
     @IBOutlet var adLabel: UILabel!
     
     var getAdInfo: Travel = Travel(title: "", description: "", travel_image: "", grade: 0.0, save: 0, like: false, ad: false)
+    var temporaryData: String = ""
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -21,7 +22,8 @@ class AdPresentViewController: UIViewController {
         adLabel.font = .boldSystemFont(ofSize: 25)
         //view.backgroundColor = .brown
         
-        adLabel.text = getAdInfo.title
+        //adLabel.text = getAdInfo.title
+        adLabel.text = temporaryData
     }
     
     @IBAction func dissmissBarButtonClicked(_ sender: UIBarButtonItem) {

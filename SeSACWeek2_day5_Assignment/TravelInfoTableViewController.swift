@@ -65,7 +65,7 @@ class TravelInfoTableViewController: UITableViewController {
         let storyboard = UIStoryboard(name: "Main", bundle: nil)
         let viewcontroller = storyboard.instantiateViewController(withIdentifier: "AdPresentViewController") as! AdPresentViewController
         viewcontroller.modalPresentationStyle = .fullScreen
-        //viewcontroller.getAdInfo = travelInfo.travel
+        viewcontroller.temporaryData = "임시 광고 버튼의 임시 데이터 전달"
         present(viewcontroller, animated: true)
         
     }
