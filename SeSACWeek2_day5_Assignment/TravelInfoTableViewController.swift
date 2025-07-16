@@ -17,6 +17,8 @@ class TravelInfoTableViewController: UITableViewController {
         
         let xib = UINib(nibName: "TravelInfoTableViewCell", bundle: nil)
         tableView.register(xib, forCellReuseIdentifier: "TravelInfoTableViewCell")
+        let xibAdd = UINib(nibName: "AdButtonTableViewCell", bundle: nil)
+        tableView.register(xibAdd, forCellReuseIdentifier: "AdButtonTableViewCell")
         
     }
     
@@ -27,16 +29,20 @@ class TravelInfoTableViewController: UITableViewController {
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         
         let cell = tableView.dequeueReusableCell(withIdentifier: "TravelInfoTableViewCell", for: indexPath) as! TravelInfoTableViewCell
+        
         let rowInfo = travelInfo.travel[indexPath.row]
-        if rowInfo.ad == true {
-            travelInfo.travel.remove(at: indexPath.row)
+
+        if rowInfo.ad {
+//            travelInfo.travel.remove(at: indexPath.row)
+//            tableView.reloadData()
             //여기에 광고버튼 추가?
-            tableView.reloadData()
+            let cellAdd = tableView.dequeueReusableCell(withIdentifier: "AdButtonTableViewCell") as! AdButtonTableViewCell
+            cellAdd.configureSetting(row: rowInfo)
+            return cellAdd
+        } else {
+            cell.configureSetting(row: rowInfo)
+            return cell
         }
-        cell.configureSetting(row: rowInfo)
-        
-        return cell
-        
     }
     
     override func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
@@ -47,7 +53,11 @@ class TravelInfoTableViewController: UITableViewController {
         
         let storyboard = UIStoryboard(name: "Main", bundle: nil)
         let viewcontroller = storyboard.instantiateViewController(withIdentifier: "TravelShowViewController") as! TravelShowViewController
+        //2단계:값 전달을 위한 반찬통 통째로 넘겨주기
+        viewcontroller.getTravelInfo = travelInfo.travel[indexPath.row]
+        
         navigationController?.pushViewController(viewcontroller, animated: true)
+
     }
     
     @IBAction func adBarButtonItemClicked(_ sender: UIBarButtonItem) {
@@ -55,6 +65,7 @@ class TravelInfoTableViewController: UITableViewController {
         let storyboard = UIStoryboard(name: "Main", bundle: nil)
         let viewcontroller = storyboard.instantiateViewController(withIdentifier: "AdPresentViewController") as! AdPresentViewController
         viewcontroller.modalPresentationStyle = .fullScreen
+        //viewcontroller.getAdInfo = travelInfo.travel
         present(viewcontroller, animated: true)
         
     }
