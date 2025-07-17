@@ -109,7 +109,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="OvA-fi-pKf" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="9073" y="1444"/>
+            <point key="canvasLocation" x="8813" y="1444"/>
         </scene>
         <!--Popular City View Controller-->
         <scene sceneID="qOr-q4-Oid">
@@ -561,7 +561,7 @@
                 </navigationController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="txX-f5-pBL" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="8302" y="1444"/>
+            <point key="canvasLocation" x="8021" y="1444"/>
         </scene>
         <!--City-->
         <scene sceneID="LJW-Gk-J6k">
