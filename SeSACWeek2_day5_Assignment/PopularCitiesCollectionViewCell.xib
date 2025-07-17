@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="23727" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_12" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="23721"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" id="gTV-IL-0wX" customClass="PopularCitiesCollectionViewCell" customModule="SeSACWeek2_day5_Assignment" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="149" height="194"/>
+            <autoresizingMask key="autoresizingMask"/>
+            <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center">
+                <rect key="frame" x="0.0" y="0.0" width="149" height="194"/>
+                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                <subviews>
+                    <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="6" translatesAutoresizingMaskIntoConstraints="NO" id="npl-6r-JaU">
+                        <rect key="frame" x="0.0" y="0.0" width="149" height="194"/>
+                        <subviews>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="dg6-YD-JMX">
+                                <rect key="frame" x="0.0" y="0.0" width="149" height="140"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="140" id="ipy-IO-LWM"/>
+                                </constraints>
+                            </imageView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="lkv-iq-9wX">
+                                <rect key="frame" x="0.0" y="146" width="149" height="21.666666666666657"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="21.670000000000002" id="PJh-Wj-Rgs"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="1em-Gr-Sxr">
+                                <rect key="frame" x="0.0" y="173.66666666666666" width="149" height="20.333333333333343"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="20.329999999999998" id="sXv-Mq-L4F"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                    </stackView>
+                </subviews>
+            </view>
+            <viewLayoutGuide key="safeArea" id="ZTg-uK-7eu"/>
+            <constraints>
+                <constraint firstAttribute="bottom" secondItem="npl-6r-JaU" secondAttribute="bottom" id="BWQ-c0-fpd"/>
+                <constraint firstItem="npl-6r-JaU" firstAttribute="top" secondItem="gTV-IL-0wX" secondAttribute="top" id="P9v-Vq-Ua5"/>
+                <constraint firstAttribute="trailing" secondItem="npl-6r-JaU" secondAttribute="trailing" id="fGS-RW-bwG"/>
+                <constraint firstItem="npl-6r-JaU" firstAttribute="leading" secondItem="gTV-IL-0wX" secondAttribute="leading" id="qDb-e0-nds"/>
+            </constraints>
+            <size key="customSize" width="149" height="194"/>
+            <connections>
+                <outlet property="cityExplainLabel" destination="1em-Gr-Sxr" id="sZC-pc-Bhr"/>
+                <outlet property="cityImageView" destination="dg6-YD-JMX" id="paj-Y5-00s"/>
+                <outlet property="cityNameLabel" destination="lkv-iq-9wX" id="jmb-sC-MKD"/>
+            </connections>
+            <point key="canvasLocation" x="142.74809160305344" y="69.718309859154928"/>
+        </collectionViewCell>
+    </objects>
+</document>

@@ -5,6 +5,7 @@
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="23721"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="collection view cell content view" minToolsVersion="11.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
@@ -82,7 +83,7 @@
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="aeJ-gG-h75" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="6914" y="1485"/>
+            <point key="canvasLocation" x="6914" y="1444"/>
         </scene>
         <!--인기 도시-->
         <scene sceneID="v8c-8D-Wc6">
@@ -108,7 +109,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="OvA-fi-pKf" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2711" y="1485"/>
+            <point key="canvasLocation" x="9073" y="1444"/>
         </scene>
         <!--Popular City View Controller-->
         <scene sceneID="qOr-q4-Oid">
@@ -134,13 +135,69 @@
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                     </view>
                     <connections>
-                        <outlet property="popualrCityNameLabel" destination="A2x-e6-GIe" id="G6M-zN-aQU"/>
                         <outlet property="popularCityImageView" destination="AVH-R8-3Wd" id="4wW-4g-AOA"/>
+                        <outlet property="popularCityNameLabel" destination="A2x-e6-GIe" id="G6M-zN-aQU"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="rDY-cR-V5p" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="3542.7480916030531" y="1484.5070422535211"/>
+            <point key="canvasLocation" x="3543" y="1444"/>
+        </scene>
+        <!--인기 도서-->
+        <scene sceneID="rDf-NG-wZ7">
+            <objects>
+                <viewController storyboardIdentifier="CollectionPopularCityViewController" id="eyV-gU-0wP" customClass="CollectionPopularCityViewController" customModule="SeSACWeek2_day5_Assignment" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="uxD-iD-dXU">
+                        <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="TW6-MM-EY6">
+                                <rect key="frame" x="16" y="156" width="361" height="628"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                <collectionViewFlowLayout key="collectionViewLayout" automaticEstimatedItemSize="YES" minimumLineSpacing="10" minimumInteritemSpacing="10" id="a9z-Lo-fPD">
+                                    <size key="itemSize" width="152" height="159"/>
+                                    <size key="headerReferenceSize" width="0.0" height="0.0"/>
+                                    <size key="footerReferenceSize" width="0.0" height="0.0"/>
+                                    <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
+                                </collectionViewFlowLayout>
+                                <cells>
+                                    <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" id="FDS-ws-Aoi">
+                                        <rect key="frame" x="0.0" y="0.0" width="152" height="159"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <collectionViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" id="tbo-dT-v0V">
+                                            <rect key="frame" x="0.0" y="0.0" width="152" height="159"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                        </collectionViewCellContentView>
+                                        <size key="customSize" width="152" height="159"/>
+                                    </collectionViewCell>
+                                </cells>
+                            </collectionView>
+                            <segmentedControl opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="plain" selectedSegmentIndex="0" translatesAutoresizingMaskIntoConstraints="NO" id="ucY-yE-rgK">
+                                <rect key="frame" x="16" y="118" width="361" height="32"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <segments>
+                                    <segment title="first"/>
+                                    <segment title="second"/>
+                                    <segment title=""/>
+                                </segments>
+                                <connections>
+                                    <action selector="citySegmentedControlChanged:" destination="eyV-gU-0wP" eventType="valueChanged" id="HYh-Em-mx7"/>
+                                </connections>
+                            </segmentedControl>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="Zbi-8T-XaF"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                    </view>
+                    <navigationItem key="navigationItem" title="인기 도서" id="tlY-8p-tC6"/>
+                    <connections>
+                        <outlet property="cityCollectionView" destination="TW6-MM-EY6" id="9hG-1k-gzI"/>
+                        <outlet property="citySegmentedControl" destination="ucY-yE-rgK" id="lLr-cG-agC"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Ng1-BI-YcR" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2711" y="1444"/>
         </scene>
         <!--도시 상세 정보-->
         <scene sceneID="xOZ-ti-a2t">
@@ -405,7 +462,7 @@
                         <segue destination="Q8p-co-tsJ" kind="relationship" relationship="viewControllers" id="yjP-Nb-9sG"/>
                         <segue destination="BYZ-38-t0r" kind="relationship" relationship="viewControllers" id="lG0-Mt-vle"/>
                         <segue destination="TKW-Sw-bfZ" kind="relationship" relationship="viewControllers" id="p04-XC-KdK"/>
-                        <segue destination="gSl-EI-gdU" kind="relationship" relationship="viewControllers" id="E88-29-njD"/>
+                        <segue destination="A4C-op-UAU" kind="relationship" relationship="viewControllers" id="ZcF-i0-k20"/>
                     </connections>
                 </tabBarController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="PTh-BC-mkt" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
@@ -485,7 +542,7 @@
                 </navigationController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="hvF-HV-qrS" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="6152" y="1485"/>
+            <point key="canvasLocation" x="6152" y="1444"/>
         </scene>
         <!--City-->
         <scene sceneID="V5E-bW-CW1">
@@ -504,7 +561,26 @@
                 </navigationController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="txX-f5-pBL" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1920" y="1485"/>
+            <point key="canvasLocation" x="8302" y="1444"/>
+        </scene>
+        <!--City-->
+        <scene sceneID="LJW-Gk-J6k">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="A4C-op-UAU" sceneMemberID="viewController">
+                    <tabBarItem key="tabBarItem" title="City" image="hat.cap.fill" catalog="system" id="TJp-yk-aLW"/>
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="fMC-lo-xTI">
+                        <rect key="frame" x="0.0" y="118" width="393" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="eyV-gU-0wP" kind="relationship" relationship="rootViewController" id="XNa-vC-aF8"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="OKQ-qW-o5U" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1920" y="1444"/>
         </scene>
     </scenes>
     <resources>
