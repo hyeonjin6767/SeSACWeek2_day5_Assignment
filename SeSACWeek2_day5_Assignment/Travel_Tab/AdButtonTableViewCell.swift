@@ -18,7 +18,15 @@ class AdButtonTableViewCell: UITableViewCell {
     
     func configureSetting(row: Travel) {
         adAddButton.setTitle(row.title, for: .normal)
+        adAddButton.tintColor = .black
+        //adAddButton.addTarget(self, action: #selector(adAddButtonClicked), for: .touchUpInside)
     }
-
     
+//    @objc func adAddButtonClicked (row: Travel) {
+//        let storyboard = UIStoryboard(name: "Main", bundle: nil)
+//        let viewcontroller = storyboard.instantiateViewController(withIdentifier: "AdPresentViewController") as! AdPresentViewController
+//        viewcontroller.modalPresentationStyle = .fullScreen
+//        viewcontroller.getAdInfo.title = row.title
+//        present(viewcontroller, animated: true)
+//    }
 }

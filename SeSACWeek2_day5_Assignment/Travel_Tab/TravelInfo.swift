@@ -8,7 +8,7 @@
 import Foundation
 
 struct Travel {
-    let title: String
+    var title: String
     let description: String
     let travel_image: String
     let grade: Double

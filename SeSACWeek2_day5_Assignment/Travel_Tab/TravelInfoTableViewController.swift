@@ -27,19 +27,15 @@ class TravelInfoTableViewController: UITableViewController {
     }
     
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        
-        let cell = tableView.dequeueReusableCell(withIdentifier: "TravelInfoTableViewCell", for: indexPath) as! TravelInfoTableViewCell
-        
+       
         let rowInfo = travelInfo.travel[indexPath.row]
-
         if rowInfo.ad {
-//            travelInfo.travel.remove(at: indexPath.row)
-//            tableView.reloadData()
-            //여기에 광고버튼 추가?
             let cellAdd = tableView.dequeueReusableCell(withIdentifier: "AdButtonTableViewCell") as! AdButtonTableViewCell
             cellAdd.configureSetting(row: rowInfo)
+
             return cellAdd
         } else {
+            let cell = tableView.dequeueReusableCell(withIdentifier: "TravelInfoTableViewCell", for: indexPath) as! TravelInfoTableViewCell
             cell.configureSetting(row: rowInfo)
             return cell
         }
@@ -51,21 +47,18 @@ class TravelInfoTableViewController: UITableViewController {
     
     override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         
-        let storyboard = UIStoryboard(name: "Main", bundle: nil)
-        let viewcontroller = storyboard.instantiateViewController(withIdentifier: "TravelShowViewController") as! TravelShowViewController
-        //2단계:값 전달을 위한 반찬통 통째로 넘겨주기
+        let viewcontroller = self.storyboard?.instantiateViewController(withIdentifier: "TravelShowViewController") as! TravelShowViewController
+            //2단계:값 전달을 위한 반찬통 통째로 넘겨주기
         viewcontroller.getTravelInfo = travelInfo.travel[indexPath.row]
-        
-        navigationController?.pushViewController(viewcontroller, animated: true)
-
+            navigationController?.pushViewController(viewcontroller, animated: true)
+   
     }
     
     @IBAction func adBarButtonItemClicked(_ sender: UIBarButtonItem) {
-        
-        let storyboard = UIStoryboard(name: "Main", bundle: nil)
-        let viewcontroller = storyboard.instantiateViewController(withIdentifier: "AdPresentViewController") as! AdPresentViewController
+       
+        let viewcontroller = self.storyboard?.instantiateViewController(withIdentifier: "AdPresentViewController") as! AdPresentViewController
         viewcontroller.modalPresentationStyle = .fullScreen
-        viewcontroller.temporaryData = "임시 광고 버튼의 임시 데이터 전달"
+        //viewcontroller.getAdInfo.title = sender.title!
         present(viewcontroller, animated: true)
         
     }
