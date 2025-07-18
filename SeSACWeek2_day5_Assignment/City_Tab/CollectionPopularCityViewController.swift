@@ -59,7 +59,7 @@ class CollectionPopularCityViewController: UIViewController, UICollectionViewDel
         let all = CityInfo().city
         if sender.selectedSegmentIndex == 0 {
             cityInfo.city = all
-            cityCollectionView.reloadData()
+            //cityCollectionView.reloadData() //반복
         } else if sender.selectedSegmentIndex == 1 {
             var filter: [City] = []
             for item in all {
@@ -68,7 +68,7 @@ class CollectionPopularCityViewController: UIViewController, UICollectionViewDel
                 }
             }
             cityInfo.city = filter
-            cityCollectionView.reloadData()
+            //cityCollectionView.reloadData() //반복
         } else if sender.selectedSegmentIndex == 2 {
             var filter: [City] = []
             for item in all {
@@ -77,14 +77,14 @@ class CollectionPopularCityViewController: UIViewController, UICollectionViewDel
                 }
             }
             cityInfo.city = filter
-            cityCollectionView.reloadData()
+            //cityCollectionView.reloadData() //반복
         }
+        cityCollectionView.reloadData()
     }
     
     func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
         
         let viewcontroller = self.storyboard?.instantiateViewController(withIdentifier: "PopularCityViewController") as! PopularCityViewController
-        
         viewcontroller.popularCitys = cityInfo.city[indexPath.item]
         
         present(viewcontroller, animated: true)

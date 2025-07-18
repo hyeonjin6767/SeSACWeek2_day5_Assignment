@@ -9,24 +9,16 @@ import UIKit
 
 class AdButtonTableViewCell: UITableViewCell {
 
-    @IBOutlet var adAddButton: UIButton!
+    @IBOutlet var adLabel: UILabel!
     
     override func awakeFromNib() {
         super.awakeFromNib()
-        
+        adLabel.font.withSize(17)
+        adLabel.textAlignment = .center
+        adLabel.textColor = .black
     }
     
     func configureSetting(row: Travel) {
-        adAddButton.setTitle(row.title, for: .normal)
-        adAddButton.tintColor = .black
-        //adAddButton.addTarget(self, action: #selector(adAddButtonClicked), for: .touchUpInside)
+        adLabel.text = row.title
     }
-    
-//    @objc func adAddButtonClicked (row: Travel) {
-//        let storyboard = UIStoryboard(name: "Main", bundle: nil)
-//        let viewcontroller = storyboard.instantiateViewController(withIdentifier: "AdPresentViewController") as! AdPresentViewController
-//        viewcontroller.modalPresentationStyle = .fullScreen
-//        viewcontroller.getAdInfo.title = row.title
-//        present(viewcontroller, animated: true)
-//    }
 }

@@ -23,6 +23,7 @@ class TravelInfoTableViewCell: UITableViewCell {
     }
 
     func configureSetting(row: Travel) {
+        
         travelTitleLabel.text = row.title
         let url = URL(string: row.travel_image)!
         travelPictureImageView.kf.setImage(with: url)
