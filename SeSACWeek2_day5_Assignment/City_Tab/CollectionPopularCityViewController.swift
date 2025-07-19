@@ -25,8 +25,8 @@ class CollectionPopularCityViewController: UIViewController, UICollectionViewDel
         cityCollectionView.delegate = self
         cityCollectionView.dataSource = self
         
-        let xib = UINib(nibName: "PopularCitiesCollectionViewCell", bundle: nil)
-        cityCollectionView.register(xib, forCellWithReuseIdentifier: "PopularCitiesCollectionViewCell")
+        let xib = UINib(nibName: PopularCitiesCollectionViewCell.identifier, bundle: nil)
+        cityCollectionView.register(xib, forCellWithReuseIdentifier: PopularCitiesCollectionViewCell.identifier)
         
         let layout = UICollectionViewFlowLayout()
         let deviceWidth = UIScreen.main.bounds.width
@@ -44,7 +44,7 @@ class CollectionPopularCityViewController: UIViewController, UICollectionViewDel
     }
     
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
-        let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "PopularCitiesCollectionViewCell", for: indexPath) as! PopularCitiesCollectionViewCell
+        let cell = collectionView.dequeueReusableCell(withReuseIdentifier: PopularCitiesCollectionViewCell.identifier, for: indexPath) as! PopularCitiesCollectionViewCell
         let url = URL(string: cityInfo.city[indexPath.item].city_image)!
         cell.cityImageView.kf.setImage(with: url)
         cell.cityNameLabel.text = cityInfo.city[indexPath.item].city_name
@@ -84,7 +84,7 @@ class CollectionPopularCityViewController: UIViewController, UICollectionViewDel
     
     func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
         
-        let viewcontroller = self.storyboard?.instantiateViewController(withIdentifier: "PopularCityViewController") as! PopularCityViewController
+        let viewcontroller = self.storyboard?.instantiateViewController(withIdentifier: PopularCitiesCollectionViewCell.identifier) as! PopularCityViewController
         viewcontroller.popularCitys = cityInfo.city[indexPath.item]
         
         present(viewcontroller, animated: true)

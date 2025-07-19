@@ -8,6 +8,8 @@
 import UIKit
 
 class PopularCitiesCollectionViewCell: UICollectionViewCell {
+    
+    static let identifier = "PopularCitiesCollectionViewCell"
 
     @IBOutlet var cityImageView: UIImageView!
     @IBOutlet var cityNameLabel: UILabel!
@@ -21,8 +23,8 @@ class PopularCitiesCollectionViewCell: UICollectionViewCell {
         cityExplainLabel.font = .systemFont(ofSize: 13)
         cityExplainLabel.textColor = .gray
         cityImageView.contentMode = .scaleAspectFill
-        cityImageView.layer.cornerRadius = cityImageView.frame.height / 1.6
-        cityImageView.layer.shouldRasterize = true
+        cityImageView.layer.cornerRadius = cityImageView.frame.width / 2
+        //cityImageView.layer.shouldRasterize = true
         cityImageView.clipsToBounds = true
         
     }

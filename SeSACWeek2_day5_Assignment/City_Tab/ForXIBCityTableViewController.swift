@@ -14,8 +14,8 @@ class ForXIBCityTableViewController: UITableViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        let xib = UINib(nibName: "CityTableViewCell", bundle: nil)
-        tableView.register(xib, forCellReuseIdentifier: "CityTableViewCell")
+        let xib = UINib(nibName: CityTableViewCell.identifier, bundle: nil)
+        tableView.register(xib, forCellReuseIdentifier: CityTableViewCell.identifier)
         
     }
     
@@ -25,7 +25,7 @@ class ForXIBCityTableViewController: UITableViewController {
     
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         
-        let cell = tableView.dequeueReusableCell(withIdentifier: "CityTableViewCell", for: indexPath) as! CityTableViewCell
+        let cell = tableView.dequeueReusableCell(withIdentifier: CityTableViewCell.identifier, for: indexPath) as! CityTableViewCell
         let rowInfo = cityInfo.city[indexPath.row]
         cell.configureSet(row: rowInfo)
         return cell

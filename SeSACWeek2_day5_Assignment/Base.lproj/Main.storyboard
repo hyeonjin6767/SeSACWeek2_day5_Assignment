@@ -224,11 +224,6 @@
                     </tableView>
                     <navigationItem key="navigationItem" title="도시 상세 정보" id="FAF-Lk-XZM">
                         <barButtonItem key="backBarButtonItem" title=" " id="Ma7-tF-1yX"/>
-                        <barButtonItem key="rightBarButtonItem" title="임시 광고 버튼" id="xwC-Dc-b3H">
-                            <connections>
-                                <action selector="adBarButtonItemClicked:" destination="ENU-yq-zEz" id="KQv-2r-nZP"/>
-                            </connections>
-                        </barButtonItem>
                     </navigationItem>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="RTL-rz-yu5" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
