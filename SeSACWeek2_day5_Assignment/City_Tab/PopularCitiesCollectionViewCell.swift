@@ -22,7 +22,7 @@ class PopularCitiesCollectionViewCell: UICollectionViewCell {
         cityExplainLabel.textAlignment = .center
         cityExplainLabel.font = .systemFont(ofSize: 13)
         cityExplainLabel.textColor = .gray
-        cityImageView.contentMode = .scaleAspectFill
+        cityImageView.contentMode = .scaleToFill
         cityImageView.layer.cornerRadius = cityImageView.frame.width / 2
         //cityImageView.layer.shouldRasterize = true
         cityImageView.clipsToBounds = true

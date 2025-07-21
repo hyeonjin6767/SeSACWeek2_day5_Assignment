@@ -9,6 +9,8 @@ import UIKit
 
 class PopularCityViewController: UIViewController {
 
+    static let identifier = "PopularCityViewController"
+    
     @IBOutlet var popularCityImageView: UIImageView!
     @IBOutlet var popularCityNameLabel: UILabel!
     

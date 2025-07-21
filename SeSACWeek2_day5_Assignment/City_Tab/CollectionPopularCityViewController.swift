@@ -84,7 +84,7 @@ class CollectionPopularCityViewController: UIViewController, UICollectionViewDel
     
     func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
         
-        let viewcontroller = self.storyboard?.instantiateViewController(withIdentifier: PopularCitiesCollectionViewCell.identifier) as! PopularCityViewController
+        let viewcontroller = self.storyboard?.instantiateViewController(withIdentifier: PopularCityViewController.identifier) as! PopularCityViewController
         viewcontroller.popularCitys = cityInfo.city[indexPath.item]
         
         present(viewcontroller, animated: true)

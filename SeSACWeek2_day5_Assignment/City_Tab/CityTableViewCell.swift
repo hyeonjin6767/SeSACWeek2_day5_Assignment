@@ -22,7 +22,7 @@ class CityTableViewCell: UITableViewCell {
         cityNameLabel.font = .boldSystemFont(ofSize: 20)
         cityNameLabel.textColor = .white
         cityNameLabel.textAlignment = .right
-        cityPhotoImageView.contentMode = .scaleAspectFill
+        cityPhotoImageView.contentMode = .scaleToFill
         cityExplainLabel.textColor = .white
         cityExplainLabel.backgroundColor = UIColor(white: 0, alpha: 0.5)
         cityExplainLabel.layer.cornerRadius = 20
